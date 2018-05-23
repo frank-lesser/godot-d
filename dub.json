@@ -12,6 +12,14 @@
 	"importPaths": [ "src", "classes", "common" ],
 	"sourcePaths": [ "src", "classes", "common" ],
 	
+	"buildTypes": {
+		"doc-json": {
+			"buildRequirements": ["allowWarnings"],
+			"buildOptions": ["syntaxOnly"],
+			"dflags": ["-c", "-Df__dummy.html", "-Xfdocs.json"]
+		}
+	},
+	
 	"subPackages":
 	[
 		{
@@ -19,8 +27,8 @@
 			"description": "A program that binds Godot's C++ classes and GDNative C functions",
 			"dependencies":
 			{
-				"asdf": "~>0.1.8",
-				"dxml": "~>0.2.3",
+				"asdf": "~>0.2.2",
+				"dxml": "~>0.3.1",
 			},
 			"sourcePaths": [ "generator", "common" ]
 		},
